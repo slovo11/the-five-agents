@@ -1,0 +1,8 @@
+Date: 2026-05-06
+Request: תכין עם התיאור — גבר ממושקל שנות 50 מאוחרות, שיער לבן-אפור קצר, זקן מלוח-פלפל, עור כהה, רוכב על שור עם כובע קאובוי
+References used: style from 2026-05-06-bull.png and 2026-05-06-cowboy-on-bull.png (golden hour, cinematic, dark bull, rodeo arena)
+Elements extracted: warm amber backlighting, dark bull, rodeo setting, cinematic photorealism, high contrast, shallow depth of field
+Model used: dall-e-3 HD
+Note: text-description approximation — exact likeness requires gpt-image-2 with reference photo input
+Prompt sent to API:
+A heavyset middle-aged man in his late 50s with very short white-gray buzzcut hair and a neatly trimmed salt-and-pepper goatee beard, olive Mediterranean complexion, dark eyes, confident warm smile. He wears a wide-brim brown leather cowboy hat, brown western vest over a plaid shirt, worn denim jeans with a large belt buckle, and leather boots with spurs. He is riding a powerful black bull in a rodeo arena, one hand gripping the bull rope, the other raised high. Golden hour warm amber backlight, dust cloud rising from the hooves, dynamic motion. Cinematic photorealistic style, high contrast, shallow depth of field, low camera angle.

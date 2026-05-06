@@ -28,6 +28,13 @@
 - **Notes / Caveats:** שני תיקונים נדרשים בסקיל: (1) החלפת Python fallback ב-PowerShell; (2) הסרת `response_format` מ-payload של gpt-image-2. פותחו כ-Open Questions לעיל.
 - **Related:** [[yuval-agent-image-gen]]
 
+### 2026-05-06 — איציק קאובוי רוכב על שור — תיאור טקסטואלי [shipped]
+
+- **What was done:** יצירת `yuval/outputs/2026-05-06-izik-cowboy.png` (1.7MB, dall-e-3 HD) — גבר ממושקל שנות 50 עם שיער לבן-אפור, זקן מלוח-פלפל, עור כהה, רוכב על שור שחור. הסגנון עקבי עם התמונות הקודמות.
+- **Decisions:** DALL-E 3 text-only — לא ניתן להשתמש בתמונת reference. תיארנו את האדם מהתמונה שהועלתה ובנינו prompt מפורט. PowerShell שימש ל-API call ו-base64 decode (Bash נכשל בגלל Unicode בנתיב).
+- **Notes / Caveats:** הפנים קרובות אבל לא מדויקות — לדיוק מלא נדרש gpt-image-2 + תמונת reference. המשתמש יכול לשמור תמונה ב-`yuval/reference/` לשימוש עתידי.
+- **Related:** [[yuval-agent-image-gen]]
+
 ### 2026-05-06 — קאובוי רוכב על שור [shipped]
 
 - **What was done:** יצירת `yuval/outputs/2026-05-06-cowboy-on-bull.png` (1.8MB) — קאובוי עם כובע ולבוש מערבי רוכב על שור שחור באצטדיון רודאו, golden hour.
