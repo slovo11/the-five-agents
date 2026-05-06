@@ -1,0 +1,7 @@
+Date: 2026-05-06
+Request: תכין תמונה שלי רוכב על השור עם כובע קאובוי ולבוש תואם
+References used: style carried from 2026-05-06-bull.png (golden hour, cinematic, photorealistic, high contrast)
+Elements extracted: warm amber backlighting, dark bull, cinematic photorealism, shallow depth of field
+Model used: dall-e-3 (gpt-image-2 pending org verification)
+Prompt sent to API:
+A cowboy riding a powerful black bull in a rodeo arena at golden hour. The rider wears a classic wide-brim cowboy hat, western shirt with pearl snaps, worn denim jeans, and leather boots with spurs. One hand grips the rope, the other raised in the air. Dynamic motion blur on the bull, dust rising around the hooves. Warm amber backlighting, cinematic photorealistic style, high contrast, shallow depth of field.

@@ -27,3 +27,10 @@
 - **Decisions:** gpt-image-2 עדיין ממתין להפצת org verification (עד 15 דקות לאחר אימות) — השתמשנו ב-dall-e-3 כ-fallback. PowerShell שימש לפענוח base64 במקום Python (Python לא זמין ב-Git Bash בסביבה זו).
 - **Notes / Caveats:** שני תיקונים נדרשים בסקיל: (1) החלפת Python fallback ב-PowerShell; (2) הסרת `response_format` מ-payload של gpt-image-2. פותחו כ-Open Questions לעיל.
 - **Related:** [[yuval-agent-image-gen]]
+
+### 2026-05-06 — קאובוי רוכב על שור [shipped]
+
+- **What was done:** יצירת `yuval/outputs/2026-05-06-cowboy-on-bull.png` (1.8MB) — קאובוי עם כובע ולבוש מערבי רוכב על שור שחור באצטדיון רודאו, golden hour.
+- **Decisions:** reference/ ריקה — ירשנו סגנון מ-bull.png הקודם (golden hour, cinematic, dark bull). המשכנו עם dall-e-3 + PowerShell decode.
+- **Notes / Caveats:** סגנון עקבי עם התמונה הקודמת ללא reference images פורמליות — כשיתווספו references ל-yuval/reference/ יהיה style extraction מדויק יותר.
+- **Related:** [[yuval-agent-image-gen]]
