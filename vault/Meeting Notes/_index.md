@@ -10,3 +10,4 @@
 - [[obsidian-setup]] — הגדרות Obsidian ו-3 סקילים ייעודיים לניהול ה-vault
 - [[ceo-agent]] — סוכן המנכ"ל: הוראות אורקסטרציה, רגיסטר סוכנים, זיכרון מתמיד
 - [[yuval-agent-image-gen]] — סוכן יובל (קריאייטיב) וסקיל gpt-image-gen: יצירת תמונות עם reference-based style consistency
+- [[yael-agent-content-writer]] — סוכן יעל (כותבת תוכן) ופרוטוקול placeholders↔יובל דרך ראובן

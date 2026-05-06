@@ -49,7 +49,7 @@ Sub-agent definitions are stored in `.claude/agents/<agent_id>.md`.
 | agent_id | name | description | capabilities | path | status |
 |---|---|---|---|---|---|
 | yuval | יובל | Creative agent — image generation with reference-based style consistency | image generation, visual content creation, style analysis, reference-based prompting | `.claude/agents/yuval.md` | active |
-| agent_2 | TBD | TBD | TBD | `.claude/agents/agent_2.md` | pending |
+| yael | יעל | LLM-only content writer — rewrites raw articles from `Content/` in the project's style and marks image needs as `{{IMAGE_NEEDED}}` placeholders | rewriting, editing, rephrasing, translation, summarization, image-need detection | `.claude/agents/yael.md` | active |
 | agent_3 | TBD | TBD | TBD | `.claude/agents/agent_3.md` | pending |
 | agent_4 | TBD | TBD | TBD | `.claude/agents/agent_4.md` | pending |
 
