@@ -16,7 +16,7 @@ memory schema, language policy, output format, constraints), read `agent.md` at 
 |---|---|---|---|---|
 | yuval | יובל | תמונה של, ציור של, צור תמונה, עצב, generate image, create image, image of, draw, visual, illustration, design, graphic | `.claude/agents/yuval.md` | active |
 | yael | יעל | שכתב, ערוך, נסח מחדש, תרגם, סכם, מאמר, תוכן, פוסט, rewrite, edit, rephrase, translate, summarize, article, content, post | `.claude/agents/yael.md` | active |
-| agent_3 | TBD | TBD | `.claude/agents/agent_3.md` | pending |
+| chen | חן | חפש, מצא, מחקר, מאמר על, חדש על, מה קורה עם, מקור על, search, find, research, article about, latest on, news on | `.claude/agents/chen.md` | active |
 | agent_4 | TBD | TBD | `.claude/agents/agent_4.md` | pending |
 
 ### Routing rule for יובל
@@ -38,6 +38,38 @@ delegate the task to יעל. Pass:
 
 יעל will rewrite the article, save it to `Output/<name>.md`, and return a structured
 report including any `{{IMAGE_NEEDED: "..."}}` placeholders she inserted.
+
+### Routing rule for חן
+
+If the user's message contains any of chen's trigger keywords (in Hebrew or English),
+delegate the task to חן. Pass:
+- The original user request (verbatim)
+- Topic and keywords if specified, plus any source-quality preferences (Hebrew vs English,
+  publication preferences, recency requirements)
+
+חן will search the web, fetch the best source, save it to `Content/<YYYY-MM-DD>-<slug>.md`,
+log the search to `chen/Memory/searches.md`, and return a structured report with the file
+path, the source URL, and a quality rating.
+
+---
+
+## Post-חן protocol — chaining to יעל when appropriate
+
+When חן returns "research complete; file saved to `Content/<YYYY-MM-DD>-<slug>.md`",
+ראובן decides whether to chain immediately into יעל based on the **user's original intent**:
+
+- **If the user asked only for research** ("מצא לי מאמר על X", "find me an article about Y") —
+  STOP. Return חן's report to the user (file path, source link, quality note). Do not
+  invoke יעל. Wait for explicit user instruction to proceed.
+- **If the user asked for research + rewrite/publish** ("מצא מאמר על X ושכתב אותו",
+  "research X and turn it into a post", "תכין לי פוסט על X") — chain automatically:
+  invoke יעל with the path `Content/<YYYY-MM-DD>-<slug>.md` that חן just produced. Then
+  apply the existing **Post-יעל protocol** below (placeholders + archival).
+- **If ambiguous** — apply Clarification Rules from `agent.md`: ask the user once whether
+  to proceed to rewrite, then act on the answer.
+
+When חן reports "כבר חיפשתי X בתאריך Y, יש לי את Content/<filename>" — surface that
+question to the user verbatim and wait for their decision before doing anything else.
 
 ---
 
@@ -65,5 +97,5 @@ archival step.
 
 ## Status
 
-Active agents: **2** (יובל, יעל)
-Pending agents: **2** (agent_3, agent_4 — TBD)
+Active agents: **3** (יובל, יעל, חן)
+Pending agents: **1** (agent_4 — TBD)

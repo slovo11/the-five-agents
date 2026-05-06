@@ -11,3 +11,4 @@
 - [[ceo-agent]] — סוכן המנכ"ל: הוראות אורקסטרציה, רגיסטר סוכנים, זיכרון מתמיד
 - [[yuval-agent-image-gen]] — סוכן יובל (קריאייטיב) וסקיל gpt-image-gen: יצירת תמונות עם reference-based style consistency
 - [[yael-agent-content-writer]] — סוכן יעל (כותבת תוכן) ופרוטוקול placeholders↔יובל דרך ראובן
+- [[chen-agent-web-researcher]] — סוכן חן (חוקרת רשת) עם זיכרון חיפושים ופרוטוקול chaining ליעל

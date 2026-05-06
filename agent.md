@@ -50,7 +50,7 @@ Sub-agent definitions are stored in `.claude/agents/<agent_id>.md`.
 |---|---|---|---|---|---|
 | yuval | יובל | Creative agent — image generation with reference-based style consistency | image generation, visual content creation, style analysis, reference-based prompting | `.claude/agents/yuval.md` | active |
 | yael | יעל | LLM-only content writer — rewrites raw articles from `Content/` in the project's style and marks image needs as `{{IMAGE_NEEDED}}` placeholders | rewriting, editing, rephrasing, translation, summarization, image-need detection | `.claude/agents/yael.md` | active |
-| agent_3 | TBD | TBD | TBD | `.claude/agents/agent_3.md` | pending |
+| chen | חן | Web research agent — finds high-quality, current articles on the web and saves them to `Content/` as input for יעל | web search, web fetch, source quality filtering, citation extraction, search-memory deduplication | `.claude/agents/chen.md` | active |
 | agent_4 | TBD | TBD | TBD | `.claude/agents/agent_4.md` | pending |
 
 **Routing logic:**
