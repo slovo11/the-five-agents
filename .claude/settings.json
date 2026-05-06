@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"SessionStart\", \"additionalContext\": \"OBSIDIAN VAULT WORKFLOW (mandatory):\\n1. Before any task: identify the topic, open vault/Meeting Notes/_index.md, locate or create the topic file, read it fully (Overview + Session Log).\\n2. After any task: append a dated Session Log entry to the topic file (YYYY-MM-DD, status tag, What/Decisions/Notes/Related wikilinks), update Overview if scope changed, read back to verify.\\nVault root: vault/ | Skill reference: .claude/skills/obsidian-vault-workflow/SKILL.md\"}}'",
+            "statusMessage": "Loading Obsidian vault protocol..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"UserPromptSubmit\", \"additionalContext\": \"Reminder: follow obsidian-vault-workflow before starting this task (read topic file) and after completing it (write Session Log entry). See .claude/skills/obsidian-vault-workflow/SKILL.md\"}}'",
+            "statusMessage": "Vault reminder injected"
+          }
+        ]
+      }
+    ]
+  }
+}
