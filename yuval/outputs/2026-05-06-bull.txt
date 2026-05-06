@@ -1,0 +1,7 @@
+Date: 2026-05-06
+Request: תייצר לי תמונה של שור
+References used: none
+Elements extracted: none
+Model used: dall-e-3 (gpt-image-2 pending org verification)
+Prompt sent to API:
+A powerful bull standing in an open field at golden hour. Dark brown and black muscular build, prominent curved horns, thick neck. Warm amber backlight casting a rim glow across the coat. Low camera angle emphasizing mass and strength. Shallow depth of field, blurred dry-grass background. Cinematic photorealistic style, high contrast.

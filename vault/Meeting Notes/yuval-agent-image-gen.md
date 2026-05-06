@@ -9,6 +9,8 @@
 - מה הסגנון הויזואלי הבסיסי של הפרויקט? (יש להוסיף reference images ל-`yuval/reference/` כדי לעגן אותו)
 - האם לאפשר ל-יובל להשתמש ב-`quality: high` על פי בקשה, או לנעול על `medium` תמיד?
 - כיצד לנהל ארכיון outputs — האם להגדיר מדיניות ניקוי?
+- לעדכן את הסקיל: להחליף Python fallback ב-PowerShell (Python לא זמין ב-Git Bash בסביבה הנוכחית)
+- לעדכן את הסקיל: להסיר `response_format` מה-payload של gpt-image-2 (פרמטר לא נתמך)
 
 ## Session Log
 
@@ -18,3 +20,10 @@
 - **Decisions:** `.env` כבר הכיל OPENAI_API_KEY — לא הוסף מחדש. נבחר Python fallback (לא jq) כ-primary לסביבות Windows/Git Bash. `.claude/agents/reuven.md` נוצר כ-thin Claude Code sub-agent definition שמפנה ל-`agent.md` בשורש לספציפיקציה המלאה. מבנה היברידי: קובץ flat ב-`.claude/agents/` לצד תיקיית עבודה `yuval/` בשורש.
 - **Notes / Caveats:** `yuval/reference/` ריקה — יובל יפעל ללא reference style עד שיוסיפו תמונות. keyword routing מוגדר ב-`reuven.md` ובעדכון registry ב-`agent.md`.
 - **Related:** [[ceo-agent]], [[claude-directory]], [[project-scaffold]]
+
+### 2026-05-06 — יצירת תמונת שור ראשונה [shipped]
+
+- **What was done:** יובל הריץ workflow מלא לבקשת "תמונה של שור". reference/ ריקה — תמונה ראשונה ללא style extraction. נוצרו `yuval/outputs/2026-05-06-bull.png` (1.3MB) ו-`2026-05-06-bull.txt` עם prompt log.
+- **Decisions:** gpt-image-2 עדיין ממתין להפצת org verification (עד 15 דקות לאחר אימות) — השתמשנו ב-dall-e-3 כ-fallback. PowerShell שימש לפענוח base64 במקום Python (Python לא זמין ב-Git Bash בסביבה זו).
+- **Notes / Caveats:** שני תיקונים נדרשים בסקיל: (1) החלפת Python fallback ב-PowerShell; (2) הסרת `response_format` מ-payload של gpt-image-2. פותחו כ-Open Questions לעיל.
+- **Related:** [[yuval-agent-image-gen]]
